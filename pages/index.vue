@@ -7,11 +7,10 @@ const addClick = () => {
 
 <template>
   <div>
-    <div wh-300 bg-blue flexc font-600 color-red>小滴课堂</div>
-    <a-button type="primary" !bg-green !font-600>按钮</a-button><br />
-    <h1>当前pinia的初始值：{{ count }}</h1>
-    <h2 @click="addClick">增加</h2>
-    <h2>当前pinia的初始值：{{ multiplyCount }}</h2>
+    <a-button type="primary" !bg-green !font-600>button</a-button><br />
+    <h1>initial value{{ count }}</h1>
+    <h2 @click="addClick">incr</h2>
+    <h2>calculated value：{{ multiplyCount }}</h2>
   </div>
 </template>
 
