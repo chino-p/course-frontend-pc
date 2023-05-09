@@ -1,22 +1,19 @@
-<script setup>
-let xd = $ref(1)
-const data = reactive({ a: '小滴课堂' })
-
-const handleClick = () => {
-  xd = 2
+<script lang="ts" setup>
+const { count, add, multiplyCount } = $(useUser())
+const addClick = () => {
+  add()
 }
 </script>
 
 <template>
-  <div class="home" @click="handleClick">
-    首页
-    <h1>{{ xd }}</h1>
-    <h1>{{ data.a }}</h1>
+  <div>
+    <div wh-300 bg-blue flexc font-600 color-red>小滴课堂</div>
+    <a-button type="primary" !bg-green !font-600>按钮</a-button><br />
+    <h1>当前pinia的初始值：{{ count }}</h1>
+    <h2 @click="addClick">增加</h2>
+    <h2>当前pinia的初始值：{{ multiplyCount }}</h2>
   </div>
 </template>
 
 <style scoped>
-.home {
-  background-color: aqua;
-}
 </style>
